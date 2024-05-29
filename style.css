@@ -117,7 +117,6 @@
 }
 .comicpage{
     position:absolute;
-    background-color: white;
 }
 .backbutton img:hover{
     width:2vw;
@@ -137,12 +136,108 @@
 .comicpage img{
     width:100%;
     height:100%;
+    border-radius: 2vw;
 }
 .Comic::before{
     content:'';
-    background-color: rgba(0, 0, 0, 0.79);
+    background-color: rgba(0, 0, 0, 0.69);
     width:100vw;
     height:100vh;
     position:absolute;
     z-index: 0;
+}
+.nextbutton{
+    position:absolute;
+    background-color: rgba(131, 37, 2, 0.867);
+    width:4vw;
+    height:4vw;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top:50%;
+    right:-10vw;
+    transition: ease 0.8s;
+}
+.nextbutton img{
+    width:3vw;
+    height:3vw;
+    transition: ease 0.8s;
+}
+.nextbutton img:hover{
+    width:2vw;
+    height:2vw;
+}
+.nextbutton:hover{
+    background-color: rgba(131, 37, 2, 1);
+}
+@keyframes into {
+    from{
+        transform:translate(25%);
+        opacity:0;
+    }
+    to{
+        transform:translate(0%);
+        opacity:1;
+    }
+}
+.comicpage div{
+    animation-name: into;
+    animation-duration: 1s;
+}
+#panel1{
+    display:none;
+}
+.button1{
+    position:absolute;
+    bottom:10vh;
+    width:20vw;
+    height:20vh;
+    left:3vw;
+    z-index: 6;
+    background-color: white;
+}
+.button1 img{
+    width: 100%;
+    height:100%;
+}
+.button2{
+    position:relative;
+    bottom:3vh;
+    right:3vw;
+    width:4vw;
+    height:4vh
+}
+#panel2{
+    display:none;
+}
+#panel3{
+    display:none;
+}
+#panel4{
+    display:none;
+}
+#panel5{
+    display:none;
+}
+#panel6{
+    display:none;
+}
+#panel7{
+    display:none;
+}
+#panel8{
+    display:none;
+}
+#panel9{
+    display:none;
+}
+#panel10{
+    display:none;
+}
+#panel11{
+    display:none;
+}
+#panel12{
+    display:none;
 }

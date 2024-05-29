@@ -97,7 +97,32 @@
     width:2vw;
     height:2vw;
 }
+.backbutton{
+    position:absolute;
+    background-color: rgba(131, 37, 2, 0.867);
+    width:4vw;
+    height:4vw;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    bottom:7vh;
+    left:14vw;
+    transition: ease 0.8s;
+}
+.backbutton img{
+    width:3vw;
+    height:3vw;
+    transition: ease 0.8s;
+}
 .comicpage{
     position:absolute;
     background-color: white;
+}
+.backbutton img:hover{
+    width:2vw;
+    height:2vw;
+}
+.backbutton:hover{
+    background-color: rgba(131, 37, 2, 1);
 }

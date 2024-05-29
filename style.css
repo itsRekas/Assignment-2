@@ -1,0 +1,74 @@
+*{
+    padding:0;
+    margin:0;
+}
+.Home{
+    position:relative;
+    overflow:hidden;
+    width: 100vw;
+    height:100vh;
+}
+.Bookcover{
+    background-image: url(./media/Bookcover.jpg);
+    background-size: cover; /* Cover the entire section */
+    background-repeat: no-repeat; /* No repeating of background image */
+    width:25vw;
+    height:80vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2.5vw;
+}
+.Bookcover a{
+    position: relative;
+    top:65%;
+    left:50%;
+    transform:translate(-50%);
+    width:5vw;
+    height:5vh;
+    background: rgba(165, 42, 42, 1);
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    border-radius: 2vw;
+    text-decoration: none;
+    color:black;
+    box-shadow: 1vw 1vw 2vw;
+    transition: ease 0.3s;
+}
+.Bookcover a:hover{
+    background: rgb(132, 33, 33);
+    box-shadow: 0.8vw 0.8vw 1.5vw;
+}
+.BackgroundVideo{
+    position:absolute;
+    width:100vw;
+    height:100vh;
+    z-index:-1;
+}
+@media(min-aspect-ratio:16/9){
+    .BackgroundVideo{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .BackgroundVideo{
+        width: auto;
+        height: 100%;
+    }
+}
+::-webkit-scrollbar{
+    width: 0.5vw; /* Scrollbar width */
+    border-radius: 0.5px; /* Rounded corners */
+}
+::-webkit-scrollbar-track{
+    background:rgba(46, 0, 0, 0.897);
+}
+::-webkit-scrollbar-thumb{
+    background:rgba(62, 1, 1, 0.897);
+}
+::-webkit-scrollbar-thumb:hover{
+    background:rgba(66, 5, 5, 0.897);
+}

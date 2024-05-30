@@ -16,7 +16,7 @@ let Panelarray=["panel1","panel2","panel3","panel4","panel5","panel6","panel7","
 let Panelnexta=["panel2","panel3","panel5","panel9","panel10","panel7","panel8","panel11","panel12","panel9","panel10","panel11","panel12"]
 let Panelnextb=["panel2","panel6","panel4","panel9","panel10","panel7","panel8b","panel11","panel12","panel9","panel10","panel11","panel12"]
 
-let currentindex=2;
+let currentindex=0;
 
 function getnexta(x){
     return x===Panelnexta[currentindex];

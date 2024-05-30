@@ -51,7 +51,7 @@
 .BackgroundVideo{
     bottom:0;
     left:0;
-    position:absolute;
+    position:fixed;
     z-index:-1;
 }
 @media(min-aspect-ratio:16/9){
@@ -81,7 +81,7 @@
 }
 .homebtn{
     position:absolute;
-    background-color: rgba(131, 37, 2, 0.867);
+    background-color: rgba(131, 37, 2, 0.967);
     width:4vw;
     height:4vw;
     border-radius: 50%;
@@ -91,6 +91,7 @@
     top:3vh;
     left:10vw;
     transition: ease 0.8s;
+    z-index:2;
 }
 .homebtn:hover{
     background-color: rgba(131, 37, 2, 1);
@@ -106,7 +107,7 @@
 }
 .backbutton{
     position:absolute;
-    background-color: rgba(131, 37, 2, 0.867);
+    background-color: rgba(131, 37, 2, 0.967);
     width:4vw;
     height:4vw;
     border-radius: 50%;
@@ -152,7 +153,7 @@
 }
 .nextbutton{
     position:absolute;
-    background-color: rgba(131, 37, 2, 0.867);
+    background-color: rgba(131, 37, 2, 0.967);
     width:4vw;
     height:4vw;
     border-radius: 50%;
@@ -311,7 +312,7 @@
 .button6 img:hover{
     width:110%;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
     .BackgroundVideo{
         display:none;
     }
@@ -325,7 +326,7 @@
     .Bookcover{
         width:65vw;
         height:50vh;
-        top:25vh;
+        top:15vh;
         transform:translate(-50%);
     }
     .Bookcover a{
@@ -387,7 +388,7 @@
         width:80vw;
         height:auto;
         top:30vh;
-        left:7vw;
+        left:10vw;
     }
     .comicpage img{
         width:100%;

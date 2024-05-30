@@ -11,15 +11,19 @@ let p10= document.getElementById("panel10");
 let p11= document.getElementById("panel11");
 let p12= document.getElementById("panel12");
 
-let Panelarray=["panel1","panel2","panel3","panel4","panel5","panel6","panel7","panel8","panel9","panel10","panel11","panel12"]
-let Panelprev= ["panel1","panel1","panel2","panel3","panel3","panel2","panel6","panel7","panel4","panel5", "panel8", "panel8"]
-let Panelnexta=["panel2","panel3","panel5","panel9","panel10","panel7","panel8","panel11","panel9","panel10","panel11","panel12"]
-let Panelnextb=["panel2","panel6","panel4","panel9","panel10","panel7","panel8","panel12","panel9","panel10","panel11","panel12"]
+let Panelprev= ["panel1","panel1","panel2","panel3","panel3","panel2","panel6","panel7","panel7","panel4","panel5", "panel8", "panel8"]
+let Panelarray=["panel1","panel2","panel3","panel4","panel5","panel6","panel7","panel8","panel8b","panel9","panel10","panel11","panel12"]
+let Panelnexta=["panel2","panel3","panel5","panel9","panel10","panel7","panel8","panel11","panel12","panel9","panel10","panel11","panel12"]
+let Panelnextb=["panel2","panel6","panel4","panel9","panel10","panel7","panel8b","panel11","panel12","panel9","panel10","panel11","panel12"]
 
-let currentindex=0;
+let currentindex=2;
 
-function getnext(x){
+function getnexta(x){
     return x===Panelnexta[currentindex];
+}
+
+function getnextb(x){
+    return x===Panelnextb[currentindex];
 }
 
 function getback(x){
@@ -28,8 +32,15 @@ function getback(x){
 
 function nexta(){
     document.getElementById(Panelarray[currentindex]).style.display='none';
-    currentindex=Panelarray.findIndex(getnext);
-    console.log(Panelarray.findIndex(getnext));
+    currentindex=Panelarray.findIndex(getnexta);
+    console.log(Panelarray.findIndex(getnexta));
+    document.getElementById(Panelarray[currentindex]).style.display='block';
+}
+
+function nextb(){
+    document.getElementById(Panelarray[currentindex]).style.display='none';
+    currentindex=Panelarray.findIndex(getnextb);
+    console.log(Panelarray.findIndex(getnextb));
     document.getElementById(Panelarray[currentindex]).style.display='block';
 }
 

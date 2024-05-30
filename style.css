@@ -190,10 +190,10 @@
 }
 .button1{
     position:absolute;
-    bottom:10vh;
-    width:20vw;
-    height:20vh;
-    left:3vw;
+    bottom:6vh;
+    width:10vw;
+    height:10vh;
+    left:6vw;
     z-index: 6;
     background-color: white;
 }
@@ -202,11 +202,66 @@
     height:auto;
 }
 .button2{
-    position:relative;
-    bottom:3vh;
-    right:3vw;
-    width:4vw;
-    height:4vh
+    position:absolute;
+    bottom:6vh;
+    width:10vw;
+    height:10vh;
+    right:6vw;
+    z-index: 6;
+}
+.button2 img{
+    width: 100%;
+    height:auto;
+}
+.button3{
+    position:absolute;
+    top:15vh;
+    width:10vw;
+    height:10vh;
+    left:10vw;
+    z-index: 6;
+    background-color: white;
+}
+.button3 img{
+    width: 100%;
+    height:auto;
+}
+.button4{
+    position:absolute;
+    top:15vh;
+    width:10vw;
+    height:10vh;
+    right:10vw;
+    z-index: 6;
+}
+.button4 img{
+    width: 100%;
+    height:auto;
+}
+.button5{
+    position:absolute;
+    bottom:6vh;
+    width:10vw;
+    height:10vh;
+    left:6vw;
+    z-index: 6;
+    background-color: white;
+}
+.button5 img{
+    width: 100%;
+    height:auto;
+}
+.button6{
+    position:absolute;
+    bottom:6vh;
+    width:10vw;
+    height:10vh;
+    right:6vw;
+    z-index: 6;
+}
+.button6 img{
+    width: 100%;
+    height:auto;
 }
 #panel2{
     display:none;
@@ -229,6 +284,9 @@
 #panel8{
     display:none;
 }
+#panel8b{
+    display:none;
+}
 #panel9{
     display:none;
 }
@@ -240,4 +298,12 @@
 }
 #panel12{
     display:none;
+}
+.button1 img:hover,
+.button2 img:hover,
+.button3 img:hover,
+.button4 img:hover,
+.button5 img:hover,
+.button6 img:hover{
+    width:110%;
 }

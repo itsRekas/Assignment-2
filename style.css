@@ -199,7 +199,7 @@
 }
 .button1 img{
     width: 100%;
-    height:100%;
+    height:auto;
 }
 .button2{
     position:relative;

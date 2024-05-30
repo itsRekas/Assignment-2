@@ -1,147 +1,198 @@
-<!Doctype html>
+<!DOCTYPE html> <!-- Document type declaration indicating this is an HTML5 document -->
 <html>
     <head>
         <!-- Title of the webpage -->
         <title>Assignment 2</title>
+        
         <!-- Character encoding for the document -->
         <meta charset="UTF-8">
+        
         <!-- Author of the document -->
         <meta name="author" content="Group Members">
+        
         <!-- Description of the document -->
         <meta name="description" content="Create a web page to house our comic book.">
+        
         <!-- Viewport settings for responsive design -->
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <!-- Link to external CSS file -->
         <link rel="stylesheet" href="style.css">
+        
         <!-- Favicon for the webpage -->
         <link rel="icon" href="./media/favicon.png">
+        
         <!-- Link to external JavaScript file, loaded asynchronously -->
         <script defer src="script.js"></script>
     </head>
     <body>
+        <!-- Main content section -->
         <section class="Comic">
+            <!-- Home button -->
             <div class="homebtn">
+                <!-- Link to navigate back to the homepage -->
                 <a href="index.html"><img src="./media/homebtnimg.png"></a>
             </div>
+            
+            <!-- Background video -->
             <video autoplay loop muted plays-inline class="BackgroundVideo">
+                <!-- Source file for the video -->
                 <source src="./media/Backgroundvid.mp4" type="video/mp4">
             </video>
+            
+            <!-- Background music -->
             <audio autoplay loop plays-inline class="music">
+                <!-- Source file for the audio -->
                 <source src="./media/Backgroundmusic.mp3" type="audio/mpeg">
             </audio>
+            
+            <!-- Comic panels -->
             <div class="comicpage">
+               <!-- Panel 1 -->
                <div id="panel1">
+                    <!-- Image for panel 1 -->
                     <img src="./media/Panel1.jpg">
+                    <!-- Next button to move to the next panel -->
                     <div class="nextbutton">
                         <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
                     </div>
                </div> 
+               <!-- Panel 2 -->
                <div id="panel2">
+                    <!-- Image for panel 2 -->
                     <img src="./media/Panel2.jpg">
+                    <!-- Buttons for panel 2 -->
                     <div class="button1" style="background-color: transparent;">
                         <a onclick=nexta() href="#"><img src="./media/panel2btn1.png"></a>
                     </div>
                     <div class="button2">
                         <a onclick=nextb() href="#"><img src="./media/panel2btn2.png"></a>
                     </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
                </div>
+               <!-- Panel 3 -->
                <div id="panel3">
+                    <!-- Image for panel 3 -->
                     <img src="./media/Panel3.jpg">
+                    <!-- Buttons for panel 3 -->
                     <div class="button3" style="background-color: transparent;">
                         <a onclick=nexta() href="#"><img src="./media/panel3btn1.png"></a>
                     </div>
                     <div class="button4">
                         <a onclick=nextb() href="#"><img src="./media//panel3btn2.png"></a>
                     </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
                 </div>
+                <!-- Panel 4 -->
                 <div id="panel4">
+                    <!-- Image for panel 4 -->
                     <img src="./media/Panel4.jpg">
+                    <!-- Next button to move to the next panel -->
                     <div class="nextbutton">
                         <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
                     </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
                </div>
+               <!-- Panel 5 -->
                <div id="panel5">
+                    <!-- Image for panel 5 -->
                     <img src="./media/Panel5.jpg">
+                    <!-- Next button to move to the next panel -->
                     <div class="nextbutton">
                         <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
                     </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
                 </div>
+                <!-- Panel 6 -->
                 <div id="panel6">
+                    <!-- Image for panel 6 -->
                     <img src="./media/Panel6.jpg">
+                    <!-- Next button to move to the next panel -->
                     <div class="nextbutton">
                         <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
                     </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
                </div>
+               <!-- Panel 7 -->
                <div id="panel7">
-                <img src="./media/Panel7.jpg">
-                <div class="button5" style="background-color: transparent;">
-                    <a onclick=nexta() href="#"><img src="./media/panel7btn1.png"></a>
-                </div>
-                <div class="button6">
-                    <a onclick=nextb() href="#"><img src="./media/panel7btn2.png"></a>
-                </div>
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-           </div>
-           <div id="panel8">
-                <img src="./media/Panel8.jpg">
-                <div class="nextbutton">
-                    <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
-                </div>
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-            </div>
-            <div id="panel8b">
-                <img src="./media/Panel8.jpg">
-                <div class="nextbutton">
-                    <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
-                </div>
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-            </div>
-            <div id="panel9">
-                <img src="./media/Panel9.jpg">
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-           </div>
-           <div id="panel10">
-                <img src="./media/Panel10.jpg">
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-            </div>
-            <div id="panel11">
-                <img src="./media/Panel11.jpg">
-                <div class="backbutton">
-                    <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
-                </div>
-           </div>
-               <div id="panel12">
-                    <img src="./media/Panel12.jpg">
+                <!-- Image for panel 7 -->
+                    <img src="./media/Panel7.jpg">
+                    <!-- Buttons for panel 7 -->
+                    <div class="button5" style="background-color: transparent;">
+                        <a onclick=nexta() href="#"><img src="./media/panel7btn1.png"></a>
+                    </div>
+                    <div class="button6">
+                        <a onclick=nextb() href="#"><img src="./media/panel7btn2.png"></a>
+                    </div>
+                    <!-- Back button to return to the previous panel -->
                     <div class="backbutton">
                         <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
                     </div>
+                 </div>
+                <!-- Panel 8 -->
+                <div id="panel8">
+                        <!-- Image for panel 8 -->
+                        <img src="./media/Panel8.jpg">
+                        <!-- Next button to move to the next panel -->
+                        <div class="nextbutton">
+                            <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a>
+                        </div>
+                        <!-- Back button to return to the previous panel -->
+                        <div class="backbutton">
+                            <a onclick=back() href="#"><img src="./media/backbtn.png"></a>
+                        </div>
+                    </div>
+                <div id="panel8b"> <!-- Panel 8b -->
+                    <img src="./media/Panel8.jpg"> <!-- Image for panel 8 -->
+                    <div class="nextbutton"> <!-- Next button -->
+                        <a onclick=nexta() href="#"><img src="./media/nextbtn.png"></a> <!-- Link to trigger next panel -->
+                    </div>
+                    <div class="backbutton"> <!-- Back button -->
+                        <a onclick=back() href="#"><img src="./media/backbtn.png"></a> <!-- Link to return to the previous panel -->
+                    </div>
+                </div>
+                
+                <div id="panel9"> <!-- Panel 9 -->
+                    <img src="./media/Panel9.jpg"> <!-- Image for panel 9 -->
+                    <div class="backbutton"> <!-- Back button -->
+                        <a onclick=back() href="#"><img src="./media/backbtn.png"></a> <!-- Link to return to the previous panel -->
+                    </div>
+                </div>
+            
+                <div id="panel10"> <!-- Panel 10 -->
+                    <img src="./media/Panel10.jpg"> <!-- Image for panel 10 -->
+                    <div class="backbutton"> <!-- Back button -->
+                        <a onclick=back() href="#"><img src="./media/backbtn.png"></a> <!-- Link to return to the previous panel -->
+                    </div>
+                </div>
+                <div id="panel11"> <!-- Panel 11 -->
+                    <img src="./media/Panel11.jpg"> <!-- Image for panel 11 -->
+                    <div class="backbutton"> <!-- Back button -->
+                        <a onclick=back() href="#"><img src="./media/backbtn.png"></a> <!-- Link to return to the previous panel -->
+                    </div>
+                </div>
+                <div id="panel12"> <!-- Panel 12 -->
+                    <img src="./media/Panel12.jpg"> <!-- Image for panel 12 -->
+                    <div class="backbutton"> <!-- Back button -->
+                        <a onclick=back() href="#"><img src="./media/backbtn.png"></a> <!-- Link to return to the previous panel -->
+                    </div>
                 </div>
             </div>
-        </section>
-    </body>
-</html>
+        </section> <!-- End of Comic section -->
+    </body> <!-- End of Body -->
+</html> <!-- End of HTML document --> 

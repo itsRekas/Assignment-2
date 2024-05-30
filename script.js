@@ -1,54 +1,59 @@
-let p1= document.getElementById("panel1");
-let p2= document.getElementById("panel2");
-let p3= document.getElementById("panel3");
-let p4= document.getElementById("panel4");
-let p5= document.getElementById("panel5");
-let p6= document.getElementById("panel6");
-let p7= document.getElementById("panel7");
-let p8= document.getElementById("panel8");
-let p9= document.getElementById("panel9");
-let p10= document.getElementById("panel10");
-let p11= document.getElementById("panel11");
-let p12= document.getElementById("panel12");
+// Arrays defining the panel navigation paths
+let Panelprev = ["panel1", "panel1", "panel2", "panel3", "panel3", "panel2", "panel6", "panel7", "panel7", "panel4", "panel5", "panel8", "panel8"];
+let Panelarray = ["panel1", "panel2", "panel3", "panel4", "panel5", "panel6", "panel7", "panel8", "panel8b", "panel9", "panel10", "panel11", "panel12"];
+let Panelnexta = ["panel2", "panel3", "panel5", "panel9", "panel10", "panel7", "panel8", "panel11", "panel12", "panel9", "panel10", "panel11", "panel12"];
+let Panelnextb = ["panel2", "panel6", "panel4", "panel9", "panel10", "panel7", "panel8b", "panel11", "panel12", "panel9", "panel10", "panel11", "panel12"];
 
-let Panelprev= ["panel1","panel1","panel2","panel3","panel3","panel2","panel6","panel7","panel7","panel4","panel5", "panel8", "panel8"]
-let Panelarray=["panel1","panel2","panel3","panel4","panel5","panel6","panel7","panel8","panel8b","panel9","panel10","panel11","panel12"]
-let Panelnexta=["panel2","panel3","panel5","panel9","panel10","panel7","panel8","panel11","panel12","panel9","panel10","panel11","panel12"]
-let Panelnextb=["panel2","panel6","panel4","panel9","panel10","panel7","panel8b","panel11","panel12","panel9","panel10","panel11","panel12"]
+// Index to keep track of the current panel being displayed
+let currentindex = 0;
 
-let currentindex=0;
-
-function getnexta(x){
-    return x===Panelnexta[currentindex];
+// Function to get the next panel in path 'a'
+function getnexta(x) {
+    return x === Panelnexta[currentindex];
 }
 
-function getnextb(x){
-    return x===Panelnextb[currentindex];
+// Function to get the next panel in path 'b'
+function getnextb(x) {
+    return x === Panelnextb[currentindex];
 }
 
-function getback(x){
-    return x===Panelprev[currentindex];
+// Function to get the previous panel
+function getback(x) {
+    return x === Panelprev[currentindex];
 }
 
-function nexta(){
-    document.getElementById(Panelarray[currentindex]).style.display='none';
-    currentindex=Panelarray.findIndex(getnexta);
+// Function to navigate to the next panel in path 'a'
+function nexta() {
+    // Hide the current panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'none';
+    // Update the current index to the next panel in path 'a'
+    currentindex = Panelarray.findIndex(getnexta);
     console.log(Panelarray.findIndex(getnexta));
-    document.getElementById(Panelarray[currentindex]).style.display='block';
+    // Display the next panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'block';
 }
 
-function nextb(){
-    document.getElementById(Panelarray[currentindex]).style.display='none';
-    currentindex=Panelarray.findIndex(getnextb);
+// Function to navigate to the next panel in path 'b'
+function nextb() {
+    // Hide the current panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'none';
+    // Update the current index to the next panel in path 'b'
+    currentindex = Panelarray.findIndex(getnextb);
     console.log(Panelarray.findIndex(getnextb));
-    document.getElementById(Panelarray[currentindex]).style.display='block';
+    // Display the next panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'block';
 }
 
-function back(){
-    document.getElementById(Panelarray[currentindex]).style.display='none';
-    currentindex=Panelarray.findIndex(getback);
+// Function to navigate back to the previous panel
+function back() {
+    // Hide the current panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'none';
+    // Update the current index to the previous panel
+    currentindex = Panelarray.findIndex(getback);
     console.log(Panelarray.findIndex(getback));
-    document.getElementById(Panelarray[currentindex]).style.display='block';
+    // Display the previous panel
+    document.getElementById(Panelarray[currentindex]).style.display = 'block';
 }
 
-document.getElementById(Panelarray[currentindex]).style.display='block';
+// Initially display the first panel
+document.getElementById(Panelarray[currentindex]).style.display = 'block';

@@ -1,270 +1,353 @@
-*{
-    padding:0;
-    margin:0;
+/* Reset padding and margin for all elements */
+* {
+    padding: 0;
+    margin: 0;
 }
-.Home .Comic{
-    position:relative;
-    overflow:hidden;
-    width: 100vw;
-    height:100vh;
-}
-.Bookcover{
-    width:25vw;
-    height:80vh;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius: 2.5vw;
-}
-.Bookcoverimg{
-    width:100%;
-    height:100%;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    border-radius: 2.5vw;
-}
-.Bookcover a{
+
+/* Style for the Comic section within the Home section */
+.Home .Comic {
     position: relative;
-    top:65%;
-    left:50%;
-    transform:translate(-50%);
-    width:5vw;
-    height:5vh;
-    background: rgba(165, 42, 42, 1);
-    display:flex;
+    overflow: hidden;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Style for the book cover container */
+.Bookcover {
+    width: 25vw; /* 25% of viewport width */
+    height: 80vh; /* 80% of viewport height */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to perfect center */
+    border-radius: 2.5vw; /* Rounded corners */
+}
+
+/* Style for the book cover image */
+.Bookcoverimg {
+    width: 100%; /* Full width of container */
+    height: 100%; /* Full height of container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the image */
+    border-radius: 2.5vw; /* Rounded corners */
+}
+
+/* Style for the link within the book cover container */
+.Bookcover a {
+    position: relative;
+    top: 65%; /* Position within the book cover */
+    left: 50%;
+    transform: translate(-50%);
+    width: 5vw;
+    height: 5vh;
+    background: rgba(165, 42, 42, 1); /* Background color */
+    display: flex;
     justify-content: center;
-    align-items:center;
-    border-radius: 2vw;
-    text-decoration: none;
-    color:black;
-    box-shadow: 1vw 1vw 2vw;
-    transition: ease 0.3s;
-    font-size: calc(0.8vh + 0.8vw);
+    align-items: center;
+    border-radius: 2vw; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+    box-shadow: 1vw 1vw 2vw; /* Box shadow */
+    transition: ease 0.3s; /* Smooth transition */
+    font-size: calc(0.8vh + 0.8vw); /* Responsive font size */
 }
-.Bookcover a:hover{
-    background: rgb(132, 33, 33);
-    box-shadow: 0.8vw 0.8vw 1.5vw;
+
+/* Hover effect for the link */
+.Bookcover a:hover {
+    background: rgb(132, 33, 33); /* Darker background color */
+    box-shadow: 0.8vw 0.8vw 1.5vw; /* Slightly smaller shadow */
 }
-.BackgroundVideo{
-    bottom:0;
-    left:0;
-    position:fixed;
-    z-index:-1;
+
+/* Style for the background video */
+.BackgroundVideo {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1; /* Behind other content */
 }
-@media(min-aspect-ratio:16/9){
-    .BackgroundVideo{
-        width: 100%;
-        height: auto;
+
+/* Background video styling for wide screens */
+@media (min-aspect-ratio: 16/9) {
+    .BackgroundVideo {
+        width: 100%; /* Full width */
+        height: auto; /* Auto height */
     }
 }
-@media(max-aspect-ratio:16/9){
-    .BackgroundVideo{
-        width: auto;
-        height: 100%;
+
+/* Background video styling for tall screens */
+@media (max-aspect-ratio: 16/9) {
+    .BackgroundVideo {
+        width: auto; /* Auto width */
+        height: 100%; /* Full height */
     }
 }
-::-webkit-scrollbar{
+
+/* Style for the webkit scrollbar */
+::-webkit-scrollbar {
     width: 0.5vw; /* Scrollbar width */
     border-radius: 0.5px; /* Rounded corners */
 }
-::-webkit-scrollbar-track{
-    background:rgba(46, 0, 0, 0.897);
+
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+    background: rgba(46, 0, 0, 0.897); /* Dark red background */
 }
-::-webkit-scrollbar-thumb{
-    background:rgba(62, 1, 1, 0.897);
+
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background: rgba(62, 1, 1, 0.897); /* Darker thumb color */
 }
-::-webkit-scrollbar-thumb:hover{
-    background:rgba(66, 5, 5, 0.897);
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(66, 5, 5, 0.897); /* Even darker thumb color */
 }
-.homebtn{
-    position:absolute;
-    background-color: rgba(131, 37, 2, 0.967);
-    width:4vw;
-    height:4vw;
-    border-radius: 50%;
-    display:flex;
+
+/* Style for the home button */
+.homebtn {
+    position: absolute;
+    background-color: rgba(131, 37, 2, 0.967); /* Background color */
+    width: 4vw;
+    height: 4vw;
+    border-radius: 50%; /* Circular button */
+    display: flex;
     align-items: center;
     justify-content: center;
-    top:3vh;
-    left:10vw;
-    transition: ease 0.8s;
-    z-index:2;
+    top: 3vh; /* Position from the top */
+    left: 10vw; /* Position from the left */
+    transition: ease 0.8s; /* Smooth transition */
+    z-index: 2; /* Above other content */
 }
-.homebtn:hover{
-    background-color: rgba(131, 37, 2, 1);
+
+/* Hover effect for the home button */
+.homebtn:hover {
+    background-color: rgba(131, 37, 2, 1); /* Darker background */
 }
-.homebtn img{
-    width:3vw;
-    height:3vw;
-    transition: ease 0.8s;
+/* Styles for the home button images */
+.homebtn img {
+    width: 3vw; /* Set the width of the image to 3% of the viewport width */
+    height: 3vw; /* Set the height of the image to 3% of the viewport width */
+    transition: ease 0.8s; /* Smooth transition for all properties over 0.8 seconds */
 }
-.homebtn img:hover{
-    width:2vw;
-    height:2vw;
+
+/* Hover effect for the home button images */
+.homebtn img:hover {
+    width: 2vw; /* Reduce the width to 2% of the viewport width on hover */
+    height: 2vw; /* Reduce the height to 2% of the viewport width on hover */
 }
-.backbutton{
-    position:absolute;
-    background-color: rgba(131, 37, 2, 0.967);
-    width:4vw;
-    height:4vw;
-    border-radius: 50%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    bottom:0vh;
-    left:-6vw;
-    transition: ease 0.8s;
+
+/* Styles for the back button */
+.backbutton {
+    position: absolute; /* Position the element absolutely within its container */
+    background-color: rgba(131, 37, 2, 0.967); /* Set a semi-transparent background color */
+    width: 4vw; /* Set the width to 4% of the viewport width */
+    height: 4vw; /* Set the height to 4% of the viewport width */
+    border-radius: 50%; /* Make the button circular */
+    display: flex; /* Use flexbox to center the content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    bottom: 0vh; /* Position the button at the bottom of the container */
+    left: -6vw; /* Position the button to the left outside the container */
+    transition: ease 0.8s; /* Smooth transition for all properties over 0.8 seconds */
 }
-.backbutton img{
-    width:4.5vw;
-    height:4.5vw;
-    transition: ease 0.8s;
+
+/* Styles for the back button images */
+.backbutton img {
+    width: 4.5vw; /* Set the width of the image to 4.5% of the viewport width */
+    height: 4.5vw; /* Set the height of the image to 4.5% of the viewport width */
+    transition: ease 0.8s; /* Smooth transition for all properties over 0.8 seconds */
 }
-.backbutton img:hover{
-    width:2vw;
-    height:2vw;
+
+/* Hover effect for the back button images */
+.backbutton img:hover {
+    width: 2vw; /* Reduce the width to 2% of the viewport width on hover */
+    height: 2vw; /* Reduce the height to 2% of the viewport width on hover */
 }
-.backbutton:hover{
-    background-color: rgba(131, 37, 2, 1);
+
+/* Hover effect for the back button itself */
+.backbutton:hover {
+    background-color: rgba(131, 37, 2, 1); /* Make the background color fully opaque on hover */
 }
-.comicpage{
-    position:absolute;
-    z-index: 1;
-    width:50vw;
-    height:auto;
-    top:15vh;
-    left:25vw;
+
+/* Styles for the comic page container */
+.comicpage {
+    position: absolute; /* Position the element absolutely within its container */
+    z-index: 1; /* Set the stacking order above other elements */
+    width: 50vw; /* Set the width to 50% of the viewport width */
+    height: auto; /* Maintain the aspect ratio of the content */
+    top: 15vh; /* Position the container 15% from the top of the viewport */
+    left: 25vw; /* Center the container horizontally */
 }
-.comicpage img{
-    width:100%;
-    height:100%;
-    border-radius: 2vw;
+
+/* Styles for images inside the comic page container */
+.comicpage img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: 100%; /* Set the height to 100% of the container */
+    border-radius: 2vw; /* Round the corners of the images */
 }
-.Comic::before{
-    content:'';
-    background-color: rgba(0, 0, 0, 0.69);
-    width:100vw;
-    height:100vh;
-    position:absolute;
-    z-index: 0;
+
+/* Styles for the background overlay of the comic page */
+.Comic::before {
+    content: ''; /* Insert an empty content before the element */
+    background-color: rgba(0, 0, 0, 0.69); /* Set a semi-transparent black background */
+    width: 100vw; /* Cover the entire viewport width */
+    height: 100vh; /* Cover the entire viewport height */
+    position: absolute; /* Position the element absolutely within its container */
+    z-index: 0; /* Set the stacking order below other elements */
 }
-.nextbutton{
-    position:absolute;
-    background-color: rgba(131, 37, 2, 0.967);
-    width:4vw;
-    height:4vw;
-    border-radius: 50%;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    top:50%;
-    right:-10vw;
-    transition: ease 0.8s;
+
+/* Styles for the next button */
+.nextbutton {
+    position: absolute; /* Position the element absolutely within its container */
+    background-color: rgba(131, 37, 2, 0.967); /* Set a semi-transparent background color */
+    width: 4vw; /* Set the width to 4% of the viewport width */
+    height: 4vw; /* Set the height to 4% of the viewport width */
+    border-radius: 50%; /* Make the button circular */
+    display: flex; /* Use flexbox to center the content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    top: 50%; /* Center the button vertically */
+    right: -10vw; /* Position the button to the right outside the container */
+    transition: ease 0.8s; /* Smooth transition for all properties over 0.8 seconds */
 }
-.nextbutton img{
-    width:3.5vw;
-    height:3.5vw;
-    transition: ease 0.8s;
+
+/* Styles for the next button images */
+.nextbutton img {
+    width: 3.5vw; /* Set the width of the image to 3.5% of the viewport width */
+    height: 3.5vw; /* Set the height of the image to 3.5% of the viewport width */
+    transition: ease 0.8s; /* Smooth transition for all properties over 0.8 seconds */
 }
-.nextbutton img:hover{
-    width:2vw;
-    height:2vw;
+
+/* Hover effect for the next button images */
+.nextbutton img:hover {
+    width: 2vw; /* Reduce the width to 2% of the viewport width on hover */
+    height: 2vw; /* Reduce the height to 2% of the viewport width on hover */
 }
-.nextbutton:hover{
-    background-color: rgba(131, 37, 2, 1);
+
+/* Hover effect for the next button itself */
+.nextbutton:hover {
+    background-color: rgba(131, 37, 2, 1); /* Make the background color fully opaque on hover */
 }
+
+/* Keyframes for the 'into' animation */
 @keyframes into {
-    from{
-        transform:translate(25%);
-        opacity:0;
+    from {
+        transform: translate(25%); /* Start with a translation of 25% */
+        opacity: 0; /* Start with zero opacity */
     }
-    to{
-        transform:translate(0%);
-        opacity:1;
+    to {
+        transform: translate(0%); /* End with no translation */
+        opacity: 1; /* End with full opacity */
     }
 }
-.comicpage div{
-    animation-name: into;
-    animation-duration: 1s;
+
+/* Apply the 'into' animation to divs inside the comic page container */
+.comicpage div {
+    animation-name: into; /* Name of the animation */
+    animation-duration: 1s; /* Duration of the animation */
 }
-.button1{
-    position:absolute;
-    bottom:6vh;
-    width:10vw;
-    height:10vh;
-    left:6vw;
-    z-index: 6;
-    background-color: white;
+
+/* Styles for button1 */
+.button1 {
+    position: absolute; /* Position the element absolutely within its container */
+    bottom: 6vh; /* Position the button 6% from the bottom of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    left: 6vw; /* Position the button 6% from the left of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
+    background-color: white; /* Set the background color to white */
 }
-.button1 img{
-    width: 100%;
-    height:auto;
+
+/* Styles for images inside button1 */
+.button1 img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
 }
-.button2{
-    position:absolute;
-    bottom:6vh;
-    width:10vw;
-    height:10vh;
-    right:6vw;
-    z-index: 6;
+
+/* Styles for button2 */
+.button2 {
+    position: absolute; /* Position the element absolutely within its container */
+    bottom: 6vh; /* Position the button 6% from the bottom of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    right: 6vw; /* Position the button 6% from the right of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
 }
-.button2 img{
-    width: 100%;
-    height:auto;
+
+/* Styles for images inside button2 */
+.button2 img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
 }
-.button3{
-    position:absolute;
-    top:15vh;
-    width:10vw;
-    height:10vh;
-    left:10vw;
-    z-index: 6;
-    background-color: white;
+
+/* Styles for button3 */
+.button3 {
+    position: absolute; /* Position the element absolutely within its container */
+    top: 15vh; /* Position the button 15% from the top of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    left: 10vw; /* Position the button 10% from the left of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
+    background-color: white; /* Set the background color to white */
 }
-.button3 img{
-    width: 100%;
-    height:auto;
+
+/* Styles for images inside button3 */
+.button3 img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
 }
-.button4{
-    position:absolute;
-    top:15vh;
-    width:10vw;
-    height:10vh;
-    right:10vw;
-    z-index: 6;
+
+/* Styles for button4 */
+.button4 {
+    position: absolute; /* Position the element absolutely within its container */
+    top: 15vh; /* Position the button 15% from the top of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    right: 10vw; /* Position the button 10% from the right of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
 }
-.button4 img{
-    width: 100%;
-    height:auto;
+
+/* Styles for images inside button4 */
+.button4 img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
 }
-.button5{
-    position:absolute;
-    bottom:6vh;
-    width:10vw;
-    height:10vh;
-    left:6vw;
-    z-index: 6;
-    background-color: white;
+
+/* Styles for button5 */
+.button5 {
+    position: absolute; /* Position the element absolutely within its container */
+    bottom: 6vh; /* Position the button 6% from the bottom of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    left: 6vw; /* Position the button 6% from the left of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
+    background-color: white; /* Set the background color to white */
 }
-.button5 img{
-    width: 100%;
-    height:auto;
+
+/* Styles for images inside button5 */
+.button5 img {
+    width: 100%; /* Set the width to 100% of the container */
+    height: auto; /* Maintain the aspect ratio of the image */
 }
-.button6{
-    position:absolute;
-    bottom:6vh;
-    width:10vw;
-    height:10vh;
-    right:6vw;
-    z-index: 6;
+
+/* Styles for button6 */
+.button6 {
+    position: absolute; /* Position the element absolutely within its container */
+    bottom: 6vh; /* Position the button 6% from the bottom of the viewport */
+    width: 10vw; /* Set the width to 10% of the viewport width */
+    height: 10vh; /* Set the height to 10% of the viewport height */
+    right: 6vw; /* Position the button 6% from the right of the viewport */
+    z-index: 6; /* Set the stacking order above other elements */
 }
+/* Set the width of button6 images to 100% of their container and maintain aspect ratio */
 .button6 img{
     width: 100%;
     height:auto;
 }
+
+/* Hide panel elements */
 #panel1{
     display:none;
 }
@@ -304,6 +387,8 @@
 #panel12{
     display:none;
 }
+
+/* Increase width of button images on hover */
 .button1 img:hover,
 .button2 img:hover,
 .button3 img:hover,
@@ -312,45 +397,61 @@
 .button6 img:hover{
     width:110%;
 }
+/* Media query for screens with a maximum width of 800px */
 @media only screen and (max-width: 800px) {
-    .BackgroundVideo{
+    /* Hide background video */
+    .BackgroundVideo {
         display:none;
     }
-    body{
+
+    /* Set background image for body */
+    body {
         background:url(./media/ABp.jpg);
         background-size: cover; /* Cover the entire section */
         background-repeat: no-repeat; /* No repeating of background image */
         background-attachment: fixed;
         background-position: center;
     }
-    .Bookcover{
+
+    /* Adjust Bookcover styles for smaller screens */
+    .Bookcover {
         width:65vw;
         height:50vh;
         top:15vh;
         transform:translate(-50%);
     }
-    .Bookcover a{
+
+    /* Adjust Bookcover link styles for smaller screens */
+    .Bookcover a {
         width:15vw;
         height:3vh;
         border-radius: 4vw;
         box-shadow: 2vw 2vw 3vw;
         font-size: calc(1vh + 1vw);
     }
-    .Bookcover a:hover{
+
+    /* Hover effect for Bookcover links on smaller screens */
+    .Bookcover a:hover {
         background: rgb(132, 33, 33);
         box-shadow: 1.5vw 1.5vw 2.5vw;
     }
-    .homebtn{
+
+    /* Adjust home button styles for smaller screens */
+    .homebtn {
         width:6vw;
         height:6vw;
         top:26vh;
         left:10vw;
     }
-    .homebtn img:hover{
+
+    /* Hover effect for home button images on smaller screens */
+    .homebtn img:hover {
         width:2vw;
         height:2vw;
     }
-    .backbutton{
+
+    /* Adjust back button styles for smaller screens */
+    .backbutton {
         width:6vw;
         height:6vw;
         bottom:-3vh;
@@ -358,31 +459,41 @@
         z-index:2;
         display:block;
     }
-    .backbutton img{
+
+    /* Adjust back button image styles for smaller screens */
+    .backbutton img {
         position:relative;
         top:0vh;
         left:0vw;
         width:6.5vw;
         height:6.5vw;
     }
-    .backbutton img:hover{
+
+    /* Hover effect for back button images on smaller screens */
+    .backbutton img:hover {
         width:6.5vw;
         height:6.5vw;
     }
-    .backbutton:hover{
+
+    /* Hover effect for back button on smaller screens */
+    .backbutton:hover {
         background-color: rgba(131, 37, 2, 1);
     }
+
+    /* Keyframes for the 'into' animation on smaller screens */
     @keyframes into {
-        from{
+        from {
             transform:translate(8%);
             opacity:0;
         }
-        to{
+        to {
             transform:translate(0%);
             opacity:1;
         }
     }
-    .comicpage{
+
+    /* Adjust comic page container styles for smaller screens */
+    .comicpage {
         position:absolute;
         z-index: 1;
         width:80vw;
@@ -390,12 +501,16 @@
         top:30vh;
         left:10vw;
     }
-    .comicpage img{
+
+    /* Adjust comic page image styles for smaller screens */
+    .comicpage img {
         width:100%;
         height:100%;
         border-radius: 2vw;
     }
-    .nextbutton{
+
+    /* Adjust next button styles for smaller screens */
+    .nextbutton {
         width:6vw;
         height:6vw;
         top:-3.6vh;
@@ -403,40 +518,54 @@
         z-index:2;
         display:block;
     }
-    .nextbutton img{
+
+    /* Adjust next button image styles for smaller screens */
+    .nextbutton img {
         position:relative;
         top:0.1vh;
         left:0.2vw;
         width:5.5vw;
         height:5.5vw;
     }
-    .nextbutton img:hover{
+
+    /* Hover effect for next button images on smaller screens */
+    .nextbutton img:hover {
         width:5.5vw;
         height:5.5vw;
     }
-    .nextbutton:hover{
+
+    /* Hover effect for next button on smaller screens */
+    .nextbutton:hover {
         background-color: rgba(131, 37, 2, 1);
     }
-    .button1{
+
+    /* Adjust button1 styles for smaller screens */
+    .button1 {
         bottom:1vh;
         width:25vw;
         height:8vh;
         left:6vw;
     }
-    .button2{
+
+    /* Adjust button2 styles for smaller screens */
+    .button2 {
         bottom:1vh;
         width:25vw;
         height:8vh;
         right:6vw;
     }
-    .button3{
+
+    /* Adjust button3 styles for smaller screens */
+    .button3 {
         top:2vh;
         width:25vw;
         height:8vh;
         left:13vw;
         z-index: 6;
     }
-    .button4{
+
+    /* Adjust button4 styles for smaller screens */
+    .button4 {
         top:4vh;
         width:25vw;
         height:8vh;

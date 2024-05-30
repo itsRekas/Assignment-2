@@ -1,33 +1,51 @@
-<!Doctype html>
+<!DOCTYPE html> <!-- Document type declaration indicating this is an HTML5 document -->
 <html>
     <head>
         <!-- Title of the webpage -->
         <title>Assignment 2</title>
+        
         <!-- Character encoding for the document -->
         <meta charset="UTF-8">
+        
         <!-- Author of the document -->
         <meta name="author" content="Reginald Kotey Appiah-Sekyere">
+        
         <!-- Description of the document -->
         <meta name="description" content="Create a web page to house our comic book.">
+        
         <!-- Viewport settings for responsive design -->
-        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <!-- Link to external CSS file -->
         <link rel="stylesheet" href="style.css">
+        
         <!-- Favicon for the webpage -->
         <link rel="icon" href="./media/favicon.png">
+        
         <!-- Link to external JavaScript file, loaded asynchronously -->
         <script defer src="script.js"></script>
     </head>
     <body>
+        <!-- Main content section -->
         <section class="Home">
+            <!-- Background video -->
             <video autoplay loop muted plays-inline class="BackgroundVideo">
+                <!-- Source file for the video -->
                 <source src="./media/Backgroundvid.mp4" type="video/mp4">
             </video>
+            
+            <!-- Background music -->
             <audio autoplay loop plays-inline class="music">
+                <!-- Source file for the audio -->
                 <source src="./media/Backgroundmusic.mp3" type="audio/mpeg">
             </audio>
+            
+            <!-- Book cover image and start button -->
             <div class="Bookcover">
+                <!-- Image of the book cover -->
                 <img src="./media/Bookcover.jpg" class="Bookcoverimg">
+                
+                <!-- Button to start the comic -->
                 <a href="comic.html" class="startbtn">Start</a>
             </div>
         </section>

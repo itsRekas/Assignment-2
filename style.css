@@ -9,11 +9,17 @@
     height:100vh;
 }
 .Bookcover{
-    background-image: url(./media/Bookcover.jpg);
-    background-size: cover; /* Cover the entire section */
-    background-repeat: no-repeat; /* No repeating of background image */
     width:25vw;
     height:80vh;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2.5vw;
+}
+.Bookcoverimg{
+    width:100%;
+    height:100%;
     position:absolute;
     top:50%;
     left:50%;
@@ -36,6 +42,7 @@
     color:black;
     box-shadow: 1vw 1vw 2vw;
     transition: ease 0.3s;
+    font-size: calc(0.8vh + 0.8vw);
 }
 .Bookcover a:hover{
     background: rgb(132, 33, 33);
@@ -111,12 +118,9 @@
     transition: ease 0.8s;
 }
 .backbutton img{
-    width:3vw;
-    height:3vw;
+    width:4.5vw;
+    height:4.5vw;
     transition: ease 0.8s;
-}
-.comicpage{
-    position:absolute;
 }
 .backbutton img:hover{
     width:2vw;
@@ -160,8 +164,8 @@
     transition: ease 0.8s;
 }
 .nextbutton img{
-    width:3vw;
-    height:3vw;
+    width:3.5vw;
+    height:3.5vw;
     transition: ease 0.8s;
 }
 .nextbutton img:hover{
@@ -184,9 +188,6 @@
 .comicpage div{
     animation-name: into;
     animation-duration: 1s;
-}
-#panel1{
-    display:none;
 }
 .button1{
     position:absolute;
@@ -263,6 +264,9 @@
     width: 100%;
     height:auto;
 }
+#panel1{
+    display:none;
+}
 #panel2{
     display:none;
 }
@@ -306,4 +310,148 @@
 .button5 img:hover,
 .button6 img:hover{
     width:110%;
+}
+@media only screen and (max-width: 1000px) {
+    .BackgroundVideo{
+        display:none;
+    }
+    body{
+        background:url(./media/ABp.jpg);
+        background-size: cover; /* Cover the entire section */
+        background-repeat: no-repeat; /* No repeating of background image */
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .Bookcover{
+        width:65vw;
+        height:50vh;
+        top:25vh;
+        transform:translate(-50%);
+    }
+    .Bookcover a{
+        width:15vw;
+        height:3vh;
+        border-radius: 4vw;
+        box-shadow: 2vw 2vw 3vw;
+        font-size: calc(1vh + 1vw);
+    }
+    .Bookcover a:hover{
+        background: rgb(132, 33, 33);
+        box-shadow: 1.5vw 1.5vw 2.5vw;
+    }
+    .homebtn{
+        width:6vw;
+        height:6vw;
+        top:26vh;
+        left:10vw;
+    }
+    .homebtn img:hover{
+        width:2vw;
+        height:2vw;
+    }
+    .backbutton{
+        width:6vw;
+        height:6vw;
+        bottom:-3vh;
+        left:2.5vw;
+        z-index:2;
+        display:block;
+    }
+    .backbutton img{
+        position:relative;
+        top:0vh;
+        left:0vw;
+        width:6.5vw;
+        height:6.5vw;
+    }
+    .backbutton img:hover{
+        width:6.5vw;
+        height:6.5vw;
+    }
+    .backbutton:hover{
+        background-color: rgba(131, 37, 2, 1);
+    }
+    @keyframes into {
+        from{
+            transform:translate(8%);
+            opacity:0;
+        }
+        to{
+            transform:translate(0%);
+            opacity:1;
+        }
+    }
+    .comicpage{
+        position:absolute;
+        z-index: 1;
+        width:80vw;
+        height:auto;
+        top:30vh;
+        left:7vw;
+    }
+    .comicpage img{
+        width:100%;
+        height:100%;
+        border-radius: 2vw;
+    }
+    .nextbutton{
+        width:6vw;
+        height:6vw;
+        top:-3.6vh;
+        right:0vw;
+        z-index:2;
+        display:block;
+    }
+    .nextbutton img{
+        position:relative;
+        top:0.1vh;
+        left:0.2vw;
+        width:5.5vw;
+        height:5.5vw;
+    }
+    .nextbutton img:hover{
+        width:5.5vw;
+        height:5.5vw;
+    }
+    .nextbutton:hover{
+        background-color: rgba(131, 37, 2, 1);
+    }
+    .button1{
+        bottom:1vh;
+        width:25vw;
+        height:8vh;
+        left:6vw;
+    }
+    .button2{
+        bottom:1vh;
+        width:25vw;
+        height:8vh;
+        right:6vw;
+    }
+    .button3{
+        top:2vh;
+        width:25vw;
+        height:8vh;
+        left:13vw;
+        z-index: 6;
+    }
+    .button4{
+        top:4vh;
+        width:25vw;
+        height:8vh;
+        right:15vw;
+        z-index: 6;
+    }
+    .button5{
+        bottom:1vh;
+        width:25vw;
+        height:8vh;
+        left:6vw;
+    }
+    .button6{
+        bottom:1vh;
+        width:25vw;
+        height:8vh;
+        right:6vw;
+    }
 }

@@ -113,8 +113,8 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    bottom:9vh;
-    left:16vw;
+    bottom:0vh;
+    left:-6vw;
     transition: ease 0.8s;
 }
 .backbutton img{
